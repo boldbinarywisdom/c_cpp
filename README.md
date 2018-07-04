@@ -36,4 +36,4 @@ int main(void)
 ~~~
 
 output:
-![welcomeC](/home/ayshine/c_cpp/c/images/WelcomeCOutput.png  "welcomeC")
+![welcomeC](c/images/WelcomeCOutput.png  "welcomeC")
