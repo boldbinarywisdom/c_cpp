@@ -105,3 +105,54 @@ The first argument,the **format control string**, indicates the type of data tha
 Functions `printf()` and `scanf()` facilitate interaction betweenthe user and the computer. Because this interaction resembles a dialogue, it is often called **conversational comput,ng or interactive computing**.
 
 
+### Arithmetic in C
+The C **arithmetic operators** are summarized in the fugure below.
+
+
+|C Operation |Arithmetic Operator|Algebraic expression|C Expression|
+|-----------------------|-------------- |-----------------------|-------------- |
+|Addition |+|$$f+ 7$$| $$f + 7$$ |
+|Substraction|-|$$p-c$$| $$p - c$$|
+|Multiplication|*|$$bm$$| $$b*m$$|
+|Division|/|  $$ x/y$$ or$$  \frac{x}{y}$$ or $$  x ÷ y$$| $$ x/y$$|
+|Remainder |%|r  mod  s |r % s |
+
+*Arithmetic Operators*
+
+|Operator(s)|Operation(s)|Order of evaluation (precedence)|
+|--------------|-------------- |-----------------------|
+|$$()$$ |Parantheses|Evaluated first. If the parentheses are nested, the expression in the innermost pair is evaluated first. If there are several pairs of parantheses "on the same level"(i.e.,not nested)|
+|$$*$$|Multiplication| Evaluated second. If there are several, they are evaluated left to right.|
+|$$/$$|Division|Evaluated second. If there are several, they are evaluated left to right.|
+|$$\%$$|Remainder| |
+|$$+$$ |Addition |Evaluated last. If there are several, they are evaluated left to right. |
+|$$-$$ |Substraction |Evaluated last. If there are several, they are evaluated left to right.|
+
+*Precedence of arithmetic operators*
+
+### Decision Making: Equality and Relational Operators
+Executable C statements either perform **actions** or make **decisions**. We might make decision in a program, for example, to determine if a person's grade on an exam is greater than or equal to 60 and if it is to print the message "Congratulations! You passed." At this point we will talk about a simple version of C's **if statement** that allows a program to make a decision based on the truth or falsity of a statement of fact called **condition**. If the condition is met(i.e.,the condition is **true**) the statement in the body of the if statement is executed. If the condition is not met(i.e.,the condition is **false**) the body statement is not executed. Whether the body statement is executed or not , after the if statementcompletes, execution proceeds with the next statement after the if statement.
+Conditions in if statements are formed by using the **equality operators** and **relational operators**. The relational operators all have the same level of predecence and they associate left to right. The equality operators have a lower level of predecence than the relational operators and they also associate left to right.
+
+
+|Standard algebraic equality operator or relational operator| C equality or relational oerator| Example of C condition| Meaning of C condition|
+|--------------------|---------------------|----------------------|----------------------------|
+*Equality operators*
+|=|==|x==y|x is equal to y|
+|≠| !=| x != y | x is not equal to y |
+*Relational operators*
+|>| >| x > y| x is greater than y|
+|<|<| x< y| x is less than y|
+|≥| >=| x >= y| x greater than or equal to y|
+|≤| <=| x <= y| x is less than or equal to y|
+
+ *Equality and relational operators*
+
+
+
+Equality operator (==) can be confused with the assignment operator(=). To avoid this confusion, the equality operator should be read "double equals" and the assignment operator should be read "gets". 
+
+
+
+
+
