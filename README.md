@@ -152,7 +152,83 @@ Conditions in if statements are formed by using the **equality operators** and *
 
 Equality operator (==) can be confused with the assignment operator(=). To avoid this confusion, the equality operator should be read "double equals" and the assignment operator should be read "gets". 
 
+**A Simple C program:Operators**
+*Using if statements, relational operators, and equality operators*
 
+code:
+~~~
+/* Using if statements, relational
+   operators, ans equality operators */
 
+#include <stdio.h>
 
+/* function main begins program execution */
 
+int main(void)
+{
+	int num1; /* first number to be read from user */
+	int num2; /* second number to be read from user */
+
+	printf("Enter two integers, and I will tell you\n");
+	printf("the relationships they satisfy: ");
+
+	scanf("%d%d",&num1, &num2); /*read two integers*/
+
+	if (num1 == num2){
+		printf("%d is not equal to %d\n", num1, num2);
+	}/*end if*/
+
+	if (num1 != num2){
+		printf("%d is not equal to %d\n", num1, num2);
+	}/*end if*/
+
+	if (num1 < num2){
+		printf("%d is less than %d\n", num1, num2);
+	}/*end if*/
+
+	if (num1 > num2){
+		printf("%d is greater than %d\n", num1, num2);
+	}/*end if*/
+
+	if (num1 <= num2){
+		printf("%d is less than or equal to %d\n", num1, num2);
+	}/*end if*/
+
+	if (num1 >= num2){
+		printf("%d is greater than or equal to %d\n", num1, num2);
+	}/*end if*/
+
+	return 0; /*indicate that program ended successfully*/
+
+}/*end function main*/
+~~~
+output:
+![opr1](c/images/Operators1.png  "opr1")
+![opr2](c/images/Operators2.png  "opr2")
+![opr3](c/images/Operators3.png  "opr3")
+
+|Operators| Associativity|
+|--------|-------|
+|()|left to right|
+|*	/	%|left to right|
+|+	-left to right|
+|<	<=	>	>=|left to right|
+|==	 	!=|left to right|
+|=|left to right|
+
+*Precedence and associativity of the operators discussed so far*
+
+|Keywords||||
+|-----|------|------|----|
+|auto|double|int|struct|
+|break|else|long|switch|
+|case|enum|register|typedef|
+|char|extern|return|union|
+|const|float|short|unsigned|
+|continue|for|signed|void|
+|default|goto|sizeof|volatile|
+|do|if|static|while|
+
+*C's keywords*
+
+C keywords have special meaning to the C compiler, so you must be careful not to use these as identifiers such as variable names.
