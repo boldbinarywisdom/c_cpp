@@ -318,14 +318,24 @@ describes the repetition that occurs during a shopping trip. The condition, "the
 
 ***Note:*** Counter-controlled repetition is often called *definite repetition* because the number of repetitions is known before the loop begins executing.
 
-Here are some examples and outputs for 
-[Class Average Code](/c/Addition.c) 
+Here are some examples and outputs:
 
-output:
+- [Class Average Code](c/Average.c) 
+
 ![Class Average](c/images/Average.png  "Class Average")
 
+- [Class Average with Sentinel](c/Average_sentinel.c)
 
+![as1](c/images/Average_sentinel1.png  "as1")
+![as2](c/images/Average_sentinel2.png  "as2")
 
+- [Examination (Calculates overall passes and fails)](c/Examination.c)
+
+![exm](c/images/Exemination1.png  "exm")
+![exm2](c/images/Examination2.png  "exm2")
+
+#### Assignment Operators
+C provides several assignment operators for abbreviating assignment expressions.
 
 
 
