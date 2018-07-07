@@ -16,6 +16,8 @@ TBD
  - run output 
  
  Drag and drop the output file to terminal and your output will run. 
+ 
+### Introduction to C programming
 
 **A Simple C program: Printing a line of text**
 *introduces printf() function*
@@ -232,3 +234,107 @@ output:
 *C's keywords*
 
 C keywords have special meaning to the C compiler, so you must be careful not to use these as identifiers such as variable names.
+
+### Structured Program Development in C
+
+#### Algorithms
+The solution to any computing problem involves executing a series of actions in a specific order. A **procedure** for solving a problem in terms of
+
+- the **actions** to be executed, and
+- the **order** in which these actions are to e executed 
+
+is called an **algorithm**. Specifying the order in which statements are to be executed in a computer program is called **program control**.
+
+#### Pseudocode
+**Pseudocode** is an artificial and informal language that help you develop algorithms. Pseudocode is similar to everyday English.Pseudocode programs are not executed on computers. Rather, they merely help you "think out"a program before attempting to write it in a programming language such as C. Pseudocode consists only of action statements.
+
+#### Control Structures
+Normally, statements in a program are executed one after the other in the order in which they are written. This is called **sequential execution**. Various C statements enable you to specify that the next statement to be executed may be other than the next in sequence. This is called **transfer of control**.
+
+The sequence structure is essentially built into C. Unless directed otherwise , the computer automatically executes C statements one after the other in the order which they are written.
+
+A **flowchart** is a graphical representation of an algorithm or of a portion of an algorithm. Flowcharts aredrawn using certain special-purpose symbols such as rectangles, diamonds, ovals, and small circles; these symbols are connected by arrows called flowlines.
+When drawing a flowchart that represents a complete algorithm, an oval symbol containing the word "Begin" is the first symbol used in the flowchart; an oval symbol containing the word "End" is the last symbol used. Perhaps the most important flowcharting symbol is the **diamond symbol** also called the **decision symbol**, which indicates that a decision is to be made.
+
+C provides three types of selection structures in the form of statements. The if selection statement either performs an action if a condition is true or skips the action if the condition is false. The if...else selection statement performs an action if a condition is true and performs a different action if the condition is false. The switch selection statement performs one of many different actions depending on the value of an expression. The if statement is called a **single-selection statement** because it selects or ignores a single action. The if...else statement is called a **double-selection statement**  because it selects between two different actions. 
+
+C provides three types of repetition structures in the form of statements, namely while, do...while, and for. 
+
+#### The *if* Selection Statement
+Selection structures are used to choose among alternative courses of action. For example, suppose the passing grade on an exam is 60. The pseudocode statement
+
+> *If Student's grade is greater than or equal to 60*
+>>*Print "Passed"*
+
+Determines if the condition "student's grade is greater than or equal to 60"  is true or false. If the condition is true, then "Passed" is printed , and the next pseudocode statement in order is "performed". If the condition is false printing is ignored, and the next pseudocode statement in order is performed.
+
+The preceding pseudocode *If* statement may be written in C as 
+
+~~~
+if ( grade >= 60 ){
+	printf( "Passed\n" );
+}
+~~~
+
+#### The *if...else* Selection Statement
+The *if...else* selection statement allows you to specify that different actions are to be performed when the condition is true than when the condition is false. For example, the  pseudocode statement 
+
+>*If student's grade is greater than or equal to 60*
+>>*Print "Passed"*
+
+> *else*
+>> *Print "Failed"*
+
+prints *Passed* if the student's grade is greater than or equal to 60 and prints *Failed*  if the student's grade is less than 60. In either case, after printing occurs, the next pseudocode statement in the sequence is "performed."
+
+The preceding pseudocode *If...else* statement may be written in C as
+
+~~~
+if ( grade >= 60 )
+{
+	printf( "Passed\n" );
+}
+else
+{
+	printf( "Failed!\n" );
+}
+~~~
+
+C provides the conditional operator (?:) which is closely related to the *if...else* statement. The conditional operator is C's only **ternary operator**. The operands together with the conditional operator form a conditional expression. The first operand is a condition. The second operand is the value for the entire conditional expression if the condition is true and the third operand is the value for the entire conditional expression if the condition is false. For example the printf statement 
+
+~~~
+printf( "%s\n", grade >= 60 ? "Passed" : "Failed" ); 
+~~~
+
+**Nested *if..else* statements** test for multiple cases by placing if...else statements inside if...else statements. Many programmers prefer to write *if...else if...else* statements instead of using nested if..else statements. 
+
+#### The *while* Repetition Statements
+A **repetition statement** allows you to specify that an action is to be repeated while some condition remains true. The pseudocode statement
+
+>*While there are more items on my shopping list*
+>>*Purchase next item and cross it off my list*
+ 
+describes the repetition that occurs during a shopping trip. The condition, "there are more items on my shopping list" may be true or false. If it is true, then the action "Purchase next item and cross it off my list" is performed. This action will be performed repeatedly while the condition remains true. Eventually, the condition become false. At this point, the repetition terminates, and the first pseudocode statement after the repetition structure is executed.
+
+***Note:*** Counter-controlled repetition is often called *definite repetition* because the number of repetitions is known before the loop begins executing.
+
+Here are some examples and outputs for 
+[Class Average Code](/c/Addition.c) 
+
+output:
+![Class Average](c/images/Average.png  "Class Average")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
