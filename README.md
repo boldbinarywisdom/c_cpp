@@ -1,6 +1,6 @@
 # C and C++ Programming Languages and Exerciese
 
-### General Information about C and C++
+### Introduction
 
 TBD
 
@@ -335,8 +335,37 @@ Here are some examples and outputs:
 ![exm2](c/images/Examination2.png  "exm2")
 
 #### Assignment Operators
-C provides several assignment operators for abbreviating assignment expressions.
+C provides several assignment operators for abbreviating assignment expressions. For example thestatement `c = c + 3` can be abbreviated with the **addition assignment operator** `+=` as `c += 3;`
 
+Any statement of the form;
+ ***variable = variable operator expression;***
+where **operator** is one of the binary operators +, -, *, / or % can be written in the form;
+ ***variable operator= expression;***
+ C also provides unary **increment operator**, ++ and the unary **decrement operator** --.
+ 
+ |Assignment operator| Sample expression| Explanation|Assigns|
+ |---------------------|----------------------|-------------------|-------------------|
+ *Assume:* **int** c = 3, d = 5, e = 4, f = 6, g = 12
+ |`+=`| `c += 7`| `c = c + 7`| 10 to c| 
+ |`-=`| `d -= 4`| `d = d - 4`| 1 to c| 
+ |`*=`| `e *= 5`| `e = e * 5`| 20 to e| 
+ |`/=`| `f /= 3`| `f = f / 3`| 2 to f| 
+ |`%=`| `g %= 9`| `g = g % 9`| 3 to g| 
+
+*Arithmetic assignment operators*
+
+|Operator|Sample Expression|Explanation|
+|--------------------|-----------------------|-------------------|
+|`++`| `++a`| Increment a by 1, then use the new value of a in the expression in which resides.|
+|`++`|`a++`|Use the current value of a in the expression in which a resides, then increment a by 1|
+|`--`|`--b`|Decrement b by 1, then use the new value of b in the expression in which b resides|
+|`--`|`b--`|Use the current value of b in the expression in which b resides, then decrement b by 1|
+
+*Increment and decrement operators*
+
+[Preincrement postincrement Example](c/Pre_post_increment.c) 
+
+![ppost](c/images/Pre_post_increment.png  "ppost")
 
 
 
