@@ -448,7 +448,7 @@ Occasionally, an algorithm will contain a series of decisions in which a varialb
 
 The switch statement consists of a series of case labels and an optional default case. The following example uses switch to count the number of each different letter grade students earned on an exam.
 
-(EOF Character I used to terminate switch is `ctrl + D`)
+(EOF Character I used to terminate switch is `ctrl + D` because I use linux os system . Windows operating system uses `ctrl + Z` as EOF character)
 
 
 [Counting lettergrades Example](c/Counting_letter_grades.c)
@@ -456,6 +456,58 @@ output:
 ![clg](c/images/Counting_letter_grades.png  "clg")
 
 
+When using switch statement, remember that it can be used only for testing a **constant integral expression** (i.e, any combination of character constants and integer constants that evaluates to a constant integer value.)
+
+#### *do...while* Repetition Statement
+
+The *do...while* repetition statement is similar to the *while* statement. In the *while* statement, the loop-continuation condition is tested at the begining of the loop before the *body* of the loop is performed. The *do...while* statement tests the loop-continuation condition *after* the loop body is performed. Therefore, the loop body is executed at least once. When a *do...while* terminates, execution continues with the statement after the while clause.
+
+~~~
+do
+	statements
+	while( condition );
+do{
+	statements
+	}while( condition );
+~~~
+
+[*do..while* example](c/do_while.c)
+
+#### *break* and *continue* Statements
+
+#### Logical Operators 
+
+
+|Operator|Sample Expression|Explanation|
+|--------------------|-----------------------|-------------------|
+|`++`| `++a`| Increment a by 1, then use the new value of a in the expression in which resides.|
+|`++`|`a++`|Use the current value of a in the expression in which a resides, then increment a by 1|
+|`--`|`--b`|Decrement b by 1, then use the new value of b in the expression in which b resides|
+|`--`|`b--`|Use the current value of b in the expression in which b resides, then decrement b by 1|
+
+
+|Operator|Sample Expression|Explanation|
+|--------------------|-----------------------|-------------------|
+|`++`| `++a`| Increment a by 1, then use the new value of a in the expression in which resides.|
+|`++`|`a++`|Use the current value of a in the expression in which a resides, then increment a by 1|
+|`--`|`--b`|Decrement b by 1, then use the new value of b in the expression in which b resides|
+|`--`|`b--`|Use the current value of b in the expression in which b resides, then decrement b by 1|
+
+
+|Operator|Sample Expression|Explanation|
+|--------------------|-----------------------|-------------------|
+|`++`| `++a`| Increment a by 1, then use the new value of a in the expression in which resides.|
+|`++`|`a++`|Use the current value of a in the expression in which a resides, then increment a by 1|
+|`--`|`--b`|Decrement b by 1, then use the new value of b in the expression in which b resides|
+|`--`|`b--`|Use the current value of b in the expression in which b resides, then decrement b by 1|
+
+
+|Operator|Sample Expression|Explanation|
+|--------------------|-----------------------|-------------------|
+|`++`| `++a`| Increment a by 1, then use the new value of a in the expression in which resides.|
+|`++`|`a++`|Use the current value of a in the expression in which a resides, then increment a by 1|
+|`--`|`--b`|Decrement b by 1, then use the new value of b in the expression in which b resides|
+|`--`|`b--`|Use the current value of b in the expression in which b resides, then decrement b by 1|
 
 
 vmvmvmvson
