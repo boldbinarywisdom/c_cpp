@@ -443,11 +443,17 @@ The expressions in the for statement are optional. If *expression2* isomitted, C
 `for ( j = 2; j <= 20; j += 3 )`
 **6.** Vary the control variable over the following sequence of values: 99, 88, 77, 66, 55, 44, 33, 22, 11, 0.
 `for ( j = 99; j >= 0; j -= 11 )`
+#### *switch* Multiple-Selection Statement
+Occasionally, an algorithm will contain a series of decisions in which a varialbe or expression is tested seperately for each of the constant integral values it may assume, and different actions are taken. This is called multiple selection. C provides the **switch** multiple-selection statement to handle such decision making.
+
+The switch statement consists of a series of case labels and an optional default case. The following example uses switch to count the number of each different letter grade students earned on an exam.
+
+(EOF Character I used to terminate switch is `ctrl + D`)
 
 
-
-
-
+[Counting lettergrades Example](c/Counting_letter_grades.c)
+output:
+![clg](c/images/Counting_letter_grades.png  "clg")
 
 
 
