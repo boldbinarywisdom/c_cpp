@@ -368,6 +368,81 @@ where **operator** is one of the binary operators +, -, *, / or % can be written
 ![ppost](c/images/Pre_post_increment.png  "ppost")
 
 
+|Operators|Associativity|Type|
+|-------------|----------------|------|
+|`++(postfix)`		`--(postfix)`|  right to left| postfix|
+|`+`		`-`		`(type)`		`++(prefix)`		`--(prefix)`|right to left| unary|
+|`*`		`/`		`%`|left to right|multiplicative|
+|`+		-`|left to right|additive|
+|`<`	`<=`	`>`	`>=`|left to right|relational|
+|`==`		`!=`|left to right|equality|
+|`?:`|right to left|conditional|
+|`=`	`+=`	`-=`	`*=`	`/=`	`%=`|right to left|assignment|
+
+
+*Precedence and associativity of the operators encountered so far in the text*
+
+
+### C Program Control
+
+#### Repetition Essentials
+Most programs involve repetition, or **looping**. A **loop** is a group of intructions the computer executes repeatedly while some **loop-continuation condition** remains true. We have discussed two means of repetition:
+
+-  Counter-conrolled repetition
+-  Sentinel-conrolled repetition
+
+Counter-controlled repetition is sometimes called **definite repetition** because we know in advance exactly how many times the loop will be executed.Sentinel-controlled repetition is sometimes called **indefinite repetition** because it is not  known in advance how many times the loop will be executed.
+
+In counter-controlled repetition, a **control variable** is used to count the number of repetitions. The control variable is incremented (usually by 1) each time the group of instructions is performed. When the value of control variable indicates that the correct number of repetitions has been performed, the loop terminates and the computer continues executing with the statement after the repetition statement.
+
+Sentinel values are used to control repetition when:
+
+- The precise number of repetitions is not known in advance, and
+- The loop includes statements that obtain data each time the loop is performed.
+
+#### Counter-Controlled Repetition
+Counter-control repetition requires:
+- The **name** of a control variable(or loop counter)
+- The **initial value** of the control variable.
+- The **increment** (or **decrement**) by which the control variable is modified each time through the loop.
+- The condition that tests for the **final value** of the control variable
+
+[counter control repetition example](c/cc_repetition.c)
+output: 
+![ccr](c/images/cc_repetition.png  "ccr")
+
+***Note:*** Too many levels of nesting can make a program difficult to understand. As a general rule, try to avoid using more than three levels of nesting.
+
+#### *for* Repetition Statement 
+The for repetition statement handles all the details of counter-controlled repetition. We can rewrite counter control repetition example using for instead of while. 
+
+[counter control repetition example with for](c/cc_for_repetition.c)
+output:
+![cc4r](c/images/cc_for_repetition.png  "cc4r")
+
+~~~c
+    for ( counter = 1; counter <= 10; counter++ ) {
+        printf( "%d\n", counter ); /* display counter */
+    } /* end for */
+~~~
+
+When the for statement begins executing, the control variable counter is initialized to 1 with `counter = 1` expression. Then, the loop-continuation condition `counter <= 10` is checked. Because the initial value of counter is 1, the condition is satisfied, so the printf statement prints the value of counter, namely 1. The control variable counter is then incremented by the expression counter++, and the loop begins again with the loop-continuation test. Since the control variable is now equal to 2, the final value is not exceeded, so the program performs the printf statement This process continues untill the control variable counter is incremented to its final value of 11 which causes the loop-continuation test to fail , and repetition terminates.
+
+The expressions in the for statement are optional. If *expression2* isomitted, C assumes that the condition is true, thus creating an infinite loop. One may omit *expression1* if the control variable is initialized elsewhere in the program. *expression3* may be omitted if the increment is calculated by statements in the body of the for statement of if no incrementis needed. The increment expression in the for statement acts like a stand-alone C statement at the end of the body of the for.
+
+**Example Uses of *for* Statement**
+**1.** Vary the control variable from 1 to 100 in increments of 1.
+`for ( i = 1; i <= 100; i++ )`
+**2.** Vary thecontrol variable from 100 to 1 in increments of -1 (decrements of 1)
+`for ( i = 100; i >= 1; i--)`
+**3.** Vary the control variable from 7 to 77 in steps of 7.
+`for ( i = 7; i <= 77; i += 7 )`
+**4.** Vary the control variable from 20 to 2 in steps of -2.
+`for ( i = 20; i >= 2; i -= 2 )`
+**5.** Vary the control variable over the following sequence of values: 2, 5, 8, 11, 14, 17, 20
+`for ( j = 2; j <= 20; j += 3 )`
+**6.** Vary the control variable over the following sequence of values: 99, 88, 77, 66, 55, 44, 33, 22, 11, 0.
+`for ( j = 99; j >= 0; j -= 11 )`
 
 
 
@@ -376,4 +451,6 @@ where **operator** is one of the binary operators +, -, *, / or % can be written
 
 
 
+
+vmvmvmvson
 

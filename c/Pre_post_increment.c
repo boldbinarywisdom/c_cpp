@@ -15,7 +15,7 @@ int main( void )
     /* demonstrate preincrement */
     c = 5; /* assign 5 to c */
     printf( "%d\n", c ); /* print 5 */
-    printf( "%d\n", ++c ); /* peincrement then print 6 */
+    printf( "%d\n", ++c ); /* preincrement then print 6 */
     printf( "%d\n", c ); /* print 6 */
 
     return 0; /* indicate program ended successfully */
