@@ -474,40 +474,64 @@ do{
 [*do..while* example](c/do_while.c)
 
 #### *break* and *continue* Statements
+The **break** and **continue** statements are used to alter the flow control. The break statement when executed in a while, for, do...while or switch statement, cause an immediate exit from the statement. Program execution continues with the next statement.Common uses of the break statement ate to escape early from a loop or to skip the remainder of switch statement.
 
+The continue statement, when executed in a while , for or do...while statement, skips the remaining statements in the body of that control statement and performs the next iteration of the loop. In while and do...while statements, the loop-continuation test is evaluated immediately after the continue statement is executed. In the for statement, the increment expression is executed, then the loop continuation test is evaluated.
+
+[Break statement example with for](c/break_for.c)
+![bf](c/images/break_for.png  "bf")
+[Continue statement example with for](c/continue_for.c)
+![cf](c/images/continue_for.png  "cf")
 #### Logical Operators 
+C provides **logical operators** that may be used to form more complex conditions by combining simple conditions. The logical operators are **&&(logical AND)**, **||(logical OR)** and **! (logical NOT)** also called **logical negation**. 
+Suppose we wish to ensure that two conditions are *both* true before we choose a certain path of execution. In this case, we can use the logical operator **&&** as follows:
+~~~
+	if ( gender == 1 && age >= 65)
+		++seniorFemales;
+~~~
+Suppose we wish to ensure atsome point in a program that either *or* both of two conditions are true before we choose a certainpath of execution. In this case, we use the **||** operator as in the following program segment:
+~~~
+	if ( semesterAverage >= 90 || finalExam >= 90 )
+		printf( "Student grade is A\n" );
+~~~
+C provides !(logical negation) to enable a programmer to "reverse" the meaning of a condition. The logical negation operator is placed before a condition when we are interested in choosing a path of execution if the original condition is false, such as in the following program segment:
+
+~~~
+if ( !( grade == sentinelValue ) )
+	printf( "The next grade is %f\n", grade );
+~~~
+The follwing  tables are truth tables for logical operators.
 
 
-|Operator|Sample Expression|Explanation|
+|Expression1|Expression2|Expression1 `&&` Expression2|
 |--------------------|-----------------------|-------------------|
-|`++`| `++a`| Increment a by 1, then use the new value of a in the expression in which resides.|
-|`++`|`a++`|Use the current value of a in the expression in which a resides, then increment a by 1|
-|`--`|`--b`|Decrement b by 1, then use the new value of b in the expression in which b resides|
-|`--`|`b--`|Use the current value of b in the expression in which b resides, then decrement b by 1|
+|0|0|0|
+|0|nonzero|0|
+|nonzero|0|0|
+|nonzero|nonzero|0|
 
+*Truth table for the **&&**(logical AND) operator*
 
-|Operator|Sample Expression|Explanation|
+|Expression1|Expression2|Expression1 `||` Expression2|
 |--------------------|-----------------------|-------------------|
-|`++`| `++a`| Increment a by 1, then use the new value of a in the expression in which resides.|
-|`++`|`a++`|Use the current value of a in the expression in which a resides, then increment a by 1|
-|`--`|`--b`|Decrement b by 1, then use the new value of b in the expression in which b resides|
-|`--`|`b--`|Use the current value of b in the expression in which b resides, then decrement b by 1|
+|0|0|0|
+|0|nonzero|1|
+|nonzero|0|1|
+|nonzero|nonzero|1|
+
+*Truth table for the **||**(logical OR) operator*
+
+Expression1|! Expression1|
+|--------------------|-----------------------|
+|0|1|
+|nonzero|0|
+
+*Truth table for the **!**(logical negation) operator*
 
 
-|Operator|Sample Expression|Explanation|
-|--------------------|-----------------------|-------------------|
-|`++`| `++a`| Increment a by 1, then use the new value of a in the expression in which resides.|
-|`++`|`a++`|Use the current value of a in the expression in which a resides, then increment a by 1|
-|`--`|`--b`|Decrement b by 1, then use the new value of b in the expression in which b resides|
-|`--`|`b--`|Use the current value of b in the expression in which b resides, then decrement b by 1|
 
 
-|Operator|Sample Expression|Explanation|
-|--------------------|-----------------------|-------------------|
-|`++`| `++a`| Increment a by 1, then use the new value of a in the expression in which resides.|
-|`++`|`a++`|Use the current value of a in the expression in which a resides, then increment a by 1|
-|`--`|`--b`|Decrement b by 1, then use the new value of b in the expression in which b resides|
-|`--`|`b--`|Use the current value of b in the expression in which b resides, then decrement b by 1|
+
 
 
 vmvmvmvson
