@@ -528,6 +528,122 @@ Expression1|! Expression1|
 
 *Truth table for the **!**(logical negation) operator*
 
+### C Functions
+
+#### Program Modules in C
+Modules in C are called **functions**. C programs are typically written by combining new functions you write with "prepackaged" functions available in the **C Standard Library**. Functions are **invoked** by a **function call**, which specifies the function name and provides information (as **arguments**) that the called function needs in order to perform its designated task.
+
+#### Functions
+Functions allow you to modularize a program. All variables defined in function definitions are **local variables** they are known only in the function in which they are defined. Most functions have a list of **parameters**. The parameters provide the means for communicating information between functions. A function's parameters are also local variables of that function.
+
+#### Function Definitions
+Each program we present has consisted of a function called main that called standard library functions to accoplish its tasks. We now consider how to write custom functions. Consider a program that uses a function square to calculate and print the squares of the integers from 1 to 10.
+
+[Programmer defined function example](c/function.c)
+
+![f](c/images/function.png  "f")
+
+
+In the example above , we used the line below before main function
+
+~~~c
+int square( int y );  /* function prototype */
+~~~
+ which is a **function prototype** The in parantheses informs the compiler that square expects to receive an integer value from the caller. The compiler refersto the function prototype to check that calls to square contain the correct retrn type, the correct number of arguments, the correct argument types, and that the arguments are in the correct order.
+ 
+ Function square is **invoked** or **called** in main within the printf statement
+~~~c
+printf( "%d ", square( x ) ); /* display value of x */
+~~~
+Function square receives a copy of the value of x in the **parameter** y.  Then square calculates `y * y`. The result is passed back to function 
+printf in the main where square was invoked, and printf displays the result.
+
+The format of a function definition is 
+
+~~~c
+return-value-type function-name( parameter-list )
+{
+	definitions
+	statements
+}
+~~~
+the *function-name* is a vald identifier. The **return-value type** is the data type of the result returned to the caller. The *return-value-type* void indicates that a function does not return a value. An unspecified *return-value-type* is assumed by the compiler to be int. However, omitting the return type is discouraged. Together, the *return-value-type*, *function-name* and *parameter-list- are sometimes referred to as the **function header**.
+
+The **parameter-list** is a comma seperated list that specifies the parameters received by the function when it is called. If a function does not receive any values, *parameter-list* is void. A type must be listed explicitly for each parameter unless the parameter is of type int. If a type is not listed, int is assumed.
+
+~~~c
+/* square function definition returns square of parameters */
+int square( int y ) /* y is a copy of argument to function */
+{
+    return y * y; /* returns square of y as an int */
+} /* end of function square */
+
+~~~
+
+There are three ways to return from a called function to the point at which a function was invoked. IF the function does not return a result, control is returned simply when the function-ending right brace is reached, or by executing the statement `return;`. If the function does return a result, the statement `return expression;` returns the value of *expression* to the caller. 
+
+[Programmer defined function example2](c/maximum.c)
+
+![c](/home/ayshine/c_cpp/c/images/maximum.png  "c")
+
+ 
+#### Function Prototypes
+A function prototype tells the compiler the type of data returned by the function, the number of paramaters the function expects to receive, the types of parametrs, and the order which these parameters are expected. The compiler uses function prototypes to validate function calls.
+The function prototype for the latest example function maximum is 
+
+~~~c
+int maximum( int x, int y, int z );  /* function prototype */
+~~~
+
+This function prototype states that maximum takes three arguments of type int and returns a result of type int. Notice that the function prototype is the same as the first line of function definition of maximum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
