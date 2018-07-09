@@ -626,9 +626,22 @@ The program execution stack also contains the memory for the local variables use
 Of course, the amount of memory in a computer is finite, so only a certain amount of memory can be used to store activation records on the program execution stack. If more function calls occur than can have their activation records stored on the program execution stack, an error known as a **stack overflow** occurs.
 
 #### Headers
+Each standard library has a corresponding **header** containing the function prototypes for all the functions in that library and definitions of various data types and constants needed by those functions. Headers can be included by using `#include` preprocessor directive.
 
+#### Calling Functions: Call-by-Value and Call-by-Reference
+There are two ways to invoke functions in many programming languages **called-by-value** and **called-by-reference**. When arguments are passed by value, a *copy* of the argument's value is made and passed to the called function. Changes to the copy do not affect an original variable's value in the caller. When an argument passed by reference , the caller allows the called function to modify the original variable's value.
 
+Some Examples
+-  [Random number generator](c/random.c)
+![random](c/images/random.png  "random")
 
+-  [Roll a six sided die 6000 times](c/sixsideddie.c)
+![ssd](c/images/sixsideddie.png  "ssd")
+
+- [Randomized die roll](c/randomizedroll.c)
+![rr](c/images/randomized_roll.png  "rr")
+
+***note:*** to randomize without entering a seed each time, use a statement like `strand( time( NULL ) );`
 
 
 
