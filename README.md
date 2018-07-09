@@ -596,14 +596,36 @@ int maximum( int x, int y, int z );  /* function prototype */
 ~~~
 
 This function prototype states that maximum takes three arguments of type int and returns a result of type int. Notice that the function prototype is the same as the first line of function definition of maximum.
+A function call that does not match the function prototype is asyntax error. An error is also generated if the function prototype and the function definition disagree.
+Another imprtant feature of function prototypes is the **coercion of arguments**, i.e., the forcing of arguments to the appropriate type. For example, the math library function sqrt can be called with an integer argument even though the function prototype in <math.h> specifies a double argument, and the function will still work correctly.
+The statement `printf( "%.3f\n", sqrt( 4 ) );` correctly evaluates sqrt( 4 ), and prints the value 2.000. The function prototype causes compiler to convert the integer value 4 to the double value 4.0 before the value is passed to sqrt.
 
+|Data Type|printf conversion specfication|scanf conversion specification|
+|-------------------------|---------------------------|---------------------------------|
+|long double|%Lf|%Lf|
+|double|%f|%lf|
+|float|%f|%f|
+|unsigned long int|%lu|%lu|
+|long int|%ld|%ld|
+|unsigned int|%u|%u|
+|int|%d|%d|
+|unsigned short|%hu|%hu|
+|short|%hd|%hd|
+|char|%c|%c|
 
+*Promotion hierarchy for data types*
 
+#### Function Call Stack and Activation Records
 
+To understand how C performs function calls, we first need to consider a data structure known as stack. Stacks are known as **last-in, first out (LIFO) data structures** the last item pushed(inserted) on the stackis the first item popped (removed) from the stack.
 
+When a program call a function, the called function must know how to return to its caller, so the return address of the calling functionis pushed onto the **program execution stack (function call stack)** If a series of function calls occurs, the successive return addresses are pushed onto the stack in last-in first-out order so that each function can return to its caller.
 
+The program execution stack also contains the memory for the local variables used in each invocation of a function during a program's execution. This data, stored as a portion of the program execution stack, is known as the **activation record** or **stack frame** of the function call. When a function call is made, the activation record for that function call is pushed onto the program execution stack. When the function returns to its caller, the activation record for this function call is popped off the stack and those local variables are no longer known to the program. If a local variable holding a reference to an object  is the only variable in the program with a reference to that object, when the activation record containing that local variable is popped off the stack, the object can no longerbe accessed by the program and will eventually be deleted from memory by the JVM during "garbage collection." 
 
+Of course, the amount of memory in a computer is finite, so only a certain amount of memory can be used to store activation records on the program execution stack. If more function calls occur than can have their activation records stored on the program execution stack, an error known as a **stack overflow** occurs.
 
+#### Headers
 
 
 
