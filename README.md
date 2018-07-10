@@ -643,7 +643,9 @@ Some Examples
 
 ***note:*** to randomize without entering a seed each time, use a statement like `strand( time( NULL ) );`
 
+- [A Game of Chance: Craps](c/craps.c)
 
+![c](c/images/craps.png  "c")
 
 
 
