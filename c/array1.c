@@ -8,7 +8,7 @@ int main( void )
     int i; /* counter */
 
     /* initialize elements of array */
-    for ( i = 0; i <= 10; i++ ) {
+    for ( i = 0; i < 10; i++ ) {
         n[ i ] = 0; /* set element at location i to 0 */
     } /* end for */
 

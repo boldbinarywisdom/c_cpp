@@ -681,13 +681,14 @@ The position number contained within square brackets is more formally called a *
 #### Defining Arrays 
 Arrays occupy space in memory. You specify the type of each element and the number of elements required by each array so that the computer may reserve the appropriate amount of memory. To tell the computer to reserve 12 elements for integer array c, the definition `int c[12];` is used. The following definition `int b[ 100 ], x[ 27 ];` reserves 100 elements for integer array b and 27 elements for integer array x.
 
+The elements of an array can also be initialized when the array is defiend by following the definition with an equals sign and braces, {}, containing a comma-seperated list of **initializers**.
+
 [Array initialize Example](c/array1.c)
 ![a1](c/images/array1.png  "a1")
 [Array Initialize with Definition Example](c/array2.c)
 ![a2](c/images/array2.png  "a2")
 
-
-
+`int n[ 10 ]  = { 0 };` explicitly initializes the first element to zero and initializes the remaining nine elements to zero because there are fewer initializers than thee are elements in the array. This method of initializing the array element to zero is performed at compile time for static arrays and runtime for automatic arrays.
 
 
 
