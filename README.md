@@ -691,7 +691,18 @@ The elements of an array can also be initialized when the array is defiend by fo
 `int n[ 10 ]  = { 0 };` explicitly initializes the first element to zero and initializes the remaining nine elements to zero because there are fewer initializers than thee are elements in the array. This method of initializing the array element to zero is performed at compile time for static arrays and runtime for automatic arrays.
 
 
+If the array size is omitted from a definition with an initializer list, the number of elements in the array will be the number of elements in the initializer list. For example, `int n[] = { 1, 2, 3, 4, 5 };` would create five-element array.
+Name of the array is a symbolic constant that represents array's starting address and isnot an object.
 
+***note:*** Symbolic constants can be defied using `#define` preprocessor directive.
+
+***Using Character Arrays to Store and Manipulate Strings***
+
+A character array can be initialized using a string literal. For example, `char string1[] = "first";` initializes the elements of array string1 to the individual characters in the string literal "first". It is important to note that string "first" contains five characters *plus* aspecial string-termination character called the **null character**. Thus array string1 actually contains isx elements. The character constant representing the null character is '\0'. All strings in C end with this character. A character array representing a string should always be defined large enough to hold the number of characters in the string and the terminating null character. Character arrays also can be initialized with individual character constants in an initializer list. The preceding definition is equivalent to 
+~~~
+char string1[] = { 'f', 'i', 'r', 's', 't', '\0' };
+~~~
+ 
 
 
 
