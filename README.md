@@ -670,11 +670,16 @@ Recursive function examples :
 - [Fibonacci](c/fibonacci.c)
 ![f](/home/ayshine/c_cpp/c/images/fibonacci.png  "f")
 
-
 ### C Arrays
 
+An array is a group of memory locations related by the fact that they all have the same name and the same type. To refer to a particular location or element in the array, we specify the name of the array and the **position numer** of the particular element in the array.
 
+The first element in every array is the **zeroth element**. Thus,the first element of an array named c is referred to as c[0].In general, *i*th element of array c is referred to as c[i-1]. Array names, like other variable names, can contain only letters, digits and underscores. Array names cannot begin with a digit.
 
+The position number contained within square brackets is more formally called a **subscript(index)**. A subscript must be an integer or an integer expression. If a program uses an expression as a subscript, then the expression is evaluated to determine the subscript, then the expression is evaluated to determine the subscript.
+
+#### Defining Arrays 
+Arrays occupy space in memory.
 
 
 
