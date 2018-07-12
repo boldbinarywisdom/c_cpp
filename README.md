@@ -681,10 +681,10 @@ The position number contained within square brackets is more formally called a *
 #### Defining Arrays 
 Arrays occupy space in memory. You specify the type of each element and the number of elements required by each array so that the computer may reserve the appropriate amount of memory. To tell the computer to reserve 12 elements for integer array c, the definition `int c[12];` is used. The following definition `int b[ 100 ], x[ 27 ];` reserves 100 elements for integer array b and 27 elements for integer array x.
 
-
-
-
-
+[Array initialize Example](c/array1.c)
+![a1](c/images/array1.png  "a1")
+[Array Initialize with Definition Example](c/array2.c)
+![a2](c/images/array2.png  "a2")
 
 
 
