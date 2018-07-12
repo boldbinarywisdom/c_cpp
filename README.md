@@ -647,8 +647,31 @@ Some Examples
 
 ![c](c/images/craps.png  "c")
 
+#### Storage Classes 
+
+Each identifier (name for user-defined functions) in a program has other attiributes, including **storage class, storage duration, scope** and **linkage**.
+C provides four storage classes, indicated by the **storage class specifiers: auto, register, extern** and **static**. An identifier's **storage class** determines its storage duration, scope and linkage. An identifier's **storage duration** is the period during which the identifier exists in memory. Some exists briefly, some are repeatedly created and destroyed , and others exist for the entire execution of a program. Some can be referenced throughout a program, others from only portions of a program. An identifier's  **linkage** determines for a multiple-source-file program whether the identifier is known only in the current source file or in any source file with proper declerations. 
+The four storage class specifiers can be split into two storag durations:  **automatic storage duration** and  **static storage duration**. Keywords `auto` and `register` are used to declare variables of automatic storage duration. Variables with automatic storage duration are created when the block in which they are defined is entered; they exist while the block is active, and they are destroyed when the block is exited.
+
+Only variables can have automatic storage duration. A function's local variables normally have automatic storage duration. Keyword `auto` explicitly declares variables of automatic storage duration.
+
+Data in the machine-language version of a program is normally loaded into registers for calculations and other processing. The compiler may ignore register declerations. The following decleration suggests that the integer variable counter be placed in one of the computer's registers and initialize to 1: `register int counter = 1;`
+Keywords `extern` and `static` are used in the declarations of identifiers for variables and functions of static duration. Identifiers of static duration exist from the time at which the program being execution. For static variables, storage is allocated and initialized once, when the program begins execution. For functions, the name of the function exists when the program begins execution.
+
+#### Scope Rules
+The **scope** of an identifier  is the portion of the program in which the identifier can be referenced. 
+
+#### Recursion
+A **recursive function** is a function that calls itself either directly or indirectly through another function.
+
+Recursive function examples : 
+- [Factorial](c/factorial.c)
+![f](c/images/factorial.png  "f")
+- [Fibonacci](c/fibonacci.c)
+![f](/home/ayshine/c_cpp/c/images/fibonacci.png  "f")
 
 
+### C Arrays
 
 
 
