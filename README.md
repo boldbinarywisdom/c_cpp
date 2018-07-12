@@ -679,7 +679,7 @@ The first element in every array is the **zeroth element**. Thus,the first eleme
 The position number contained within square brackets is more formally called a **subscript(index)**. A subscript must be an integer or an integer expression. If a program uses an expression as a subscript, then the expression is evaluated to determine the subscript, then the expression is evaluated to determine the subscript.
 
 #### Defining Arrays 
-Arrays occupy space in memory.
+Arrays occupy space in memory. You specify the type of each element and the number of elements required by each array so that the computer may reserve the appropriate amount of memory. To tell the computer to reserve 12 elements for integer array c, the definition `int c[12];` is used. The following definition `int b[ 100 ], x[ 27 ];` reserves 100 elements for integer array b and 27 elements for integer array x.
 
 
 
