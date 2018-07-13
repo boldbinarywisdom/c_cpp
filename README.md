@@ -743,6 +743,37 @@ int b[ 2 ][ 2 ] = { { 1, 2 }, { 3, 4 } };
 
 ![md](c/images/multi_dim_array.png  "md")
 
+### C Pointers
+
+#### Pointer Variable Definitions and Initialization
+Pointers are variables whose values are memory addresses. Normally, a variable directly contains aspecific value. A pointer, on the other hand, contains an address of a variable that contains a specific value. Referencing a value through a pointer is called **indirection**. Pointers like all variables, must be defined before they can be used. The definition
+~~~
+int *countPtr, count;
+~~~
+specifies that variable countPtr is of type **int ***(i.e., a pointer to an integer) and is read, "countPtr is a pointer to int" or "countPtr points to an object of type int." Also, the variable count is defined to be an int, not a pointer to an int. The * only applies to countPtr in the definition. When * is used in this manner in a definition, it indicates that the variable being defined is a pointer. Pointers can be defined to point to objects of any type.
+
+Pointers should be initialized either when they are defined or in an assignment statement. A pointer may be initialized to 0, NULL or an address. A pointer with the value NULL points to nothing. NULL is a symbolic constant defined in the <stddef.h> header. Initializing a pointer to 0 is equivalent to initializing a pointer to NULL, but NULL ispreferred. When 0 is assigned, it is first converted to a pointer of the appropriate type. The value 0 is the only integer value that can be assigned directly to a pointer variable.
+
+####Pointer Operators
+
+####Passing Arguments to Functions by Reference
+
+
+####Using *const* Qualifier with Pointers
+
+####sizeof Operator
+
+####Pointer Expression and Pointer Arithmetic
+
+####Relationship between Pointers and Arrays
+
+####Arrays of Pointers
+
+####Pointers to Functions
+
+
+
+
 
 
 
