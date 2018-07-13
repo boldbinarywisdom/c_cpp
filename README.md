@@ -703,23 +703,45 @@ A character array can be initialized using a string literal. For example, `char 
 char string1[] = { 'f', 'i', 'r', 's', 't', '\0' };
 ~~~
  
+Because a string is really an array of characters, we can access individual characters in a string directly using array subscription notation. Fro example, string1[0] is the character 'f' and string1[3] is the character 's'.
+
+[Char Array](c/char_array.c)
+![ca](c/images/char_array.png  "ca")
 
 
+***no te:*** Arrays that are static are automatically initialized once at a compile time. If you do not explicitly initialize a static array, that array's elements are initialized to zero by the compiler.
 
 
+#### Passing Arrays to Functions
+T pass an array argument to a function, specfy the name of the array without any brackets. For example, if array hourlyTemperatures has been defined as 
+~~~
+int hourlyTemperatures[ 24 ];
+~~~
+the function call
+~~~
+modifyArray(hourlyTemperatures, 24)
+~~~
+passes array hourlyTemperatures and its size to function modifyArray. C automatically passes arrays to functions by reference - the called function can modify the element values in the callers' original arrays. The name of the array evaluates to the address of the first element of the array. Because the starting address of the array is passed, the called function knows precisely where the array is stored. Therefore, when the called function modifies array elements in its function body, it is modifying the actual elements in its function body, it is modifying the actual elements of the array in their original memory locations.
 
+*Passing arrays by reference makes sense for performance reasons. If arrays were passed by value, a copy of each element would be passed. For large, frequently passed arrays, this would be time consuming and would consume considerable storage for copies of the array.
 
+[Printing an array name](c/array_name.c)
+![an](c/images/array_name.png  "an")
 
+[Passing Arrays and individual array elements](c/passing_arrays.c)
+![pa](c/images/passing_arrays.png  "pa")
 
+#### Multiple Scripted Arrays
+Arrays in C have multiple subscripts. A common use of multiple-subscripted arrays is to represent **tables** of values consisting of information arranged in **rows** and **columns**. To identify a particular table element, we must specify two subscripts: The first (by convention) identifies th element's row and the second (by convention) identifies the element's column. Tables or arrays that require two subscripts to identify a particular element are called **double-subscripted arrays**. Note that multiple subscripted arrays can have more than two subscripts. In general, an array with *m* rows and *n* columns is called an *m-by-n array*.
+A multiple -subscripted array can be initialized when it is defined, much like a single-subscripted array. For example, a double-subscripted array `int b[ 2 ][ 2 ]` could be defined and initialized with 
 
+~~~
+int b[ 2 ][ 2 ] = { { 1, 2 }, { 3, 4 } };
+~~~ 
 
+[Initializing multidimensional arrays](c/multi_dim_array.c)
 
-
-
-
-
-
-
+![md](c/images/multi_dim_array.png  "md")
 
 
 
