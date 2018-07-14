@@ -755,10 +755,22 @@ specifies that variable countPtr is of type **int ***(i.e., a pointer to an inte
 Pointers should be initialized either when they are defined or in an assignment statement. A pointer may be initialized to 0, NULL or an address. A pointer with the value NULL points to nothing. NULL is a symbolic constant defined in the <stddef.h> header. Initializing a pointer to 0 is equivalent to initializing a pointer to NULL, but NULL ispreferred. When 0 is assigned, it is first converted to a pointer of the appropriate type. The value 0 is the only integer value that can be assigned directly to a pointer variable.
 
 ####Pointer Operators
+The &, or **address operator**, is a unary operator that returns the address of its operand. For example, assuming the definitions
+~~~
+int y = 5;
+int *yPtr;
+~~~
+the statement `yPtr = &y;` assigns the address of the variable y to pointer variable yPtr. Variable yPtr is then said to "point to" y.
+The unary * operator, commonly referred to as the **indirection operator** or **dereferencing operator**, returns the value of the object to which its operand (i.e., a pointer) points. For example, the statement `printf( "%d", *yPtr );` prints the value of variable y, namely 5. Using * in this manner is called **dereferencing a pointer**.
 
+[Pointer Operators Example (& and *) ](c/pointer_operators.c)
+![po](/home/ayshine/c_cpp/c/images/pointer_operators.png  "po")
 ####Passing Arguments to Functions by Reference
+There are two ways to pass arguments to a function **call by value** and **call by reference**. All arguments in C are passed by value. Many functions require the capability to modify one or more variables in the caller or to pass a pointer to a large data object to avoid the overhead of passing the object by value. For these purposes, C provides the capabilities for **simulating call-by-reference**.
 
-
+In C, you use pointers and the indirection operator to simulate call-by-reference.When calling a function with arguments that should be modified, the addresses of the arguments are passed. This is normally accomplished by applying the address operator (&) to the variable (in the caller) whose value will be modified. When the address of a variable is passed to a function, the indirection operator (*) may be used in the function to modify the value at that location in the caller's memory.
+[Cube :a variable using call-by-value](c/Cube.c) 
+![cube](c/images/cube.png  "cube")
 ####Using *const* Qualifier with Pointers
 
 ####sizeof Operator
