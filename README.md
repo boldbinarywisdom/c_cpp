@@ -771,6 +771,10 @@ There are two ways to pass arguments to a function **call by value** and **call 
 In C, you use pointers and the indirection operator to simulate call-by-reference.When calling a function with arguments that should be modified, the addresses of the arguments are passed. This is normally accomplished by applying the address operator (&) to the variable (in the caller) whose value will be modified. When the address of a variable is passed to a function, the indirection operator (*) may be used in the function to modify the value at that location in the caller's memory.
 [Cube :a variable using call-by-value](c/Cube.c) 
 ![cube](c/images/cube.png  "cube")
+
+[Cube2 :a variable using call-by-reference](c/Cube2.c) 
+![c2](c/images/Cube2.png  "c2")
+
 ####Using *const* Qualifier with Pointers
 
 ####sizeof Operator
