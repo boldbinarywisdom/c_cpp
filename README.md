@@ -2,14 +2,14 @@
 
 ### Introduction
 
-TBD
+TBD -- Kerningham and Ritchie gives an excellent intro to C. You can probably add links here. 
 
 ### C programming language
 
 TBD
 
  - code --> object - linker -   exe
- - compile code with gcc 
+ - compile code with gcc -- there can be many compilers. gcc is one of them. 
  
  gcc '/home/ayshine/c_cpp/c/Welcome_C.c' -o '/home/ayshine/c_cpp/c/Welcome'
 
@@ -334,6 +334,8 @@ Here are some examples and outputs:
 ![exm](c/images/Exemination1.png  "exm")
 ![exm2](c/images/Examination2.png  "exm2")
 
+-- feel free to add reference of ternary operator which allows visually compact code -- https://en.wikipedia.org/wiki/%3F:#C
+
 #### Assignment Operators
 C provides several assignment operators for abbreviating assignment expressions. For example thestatement `c = c + 3` can be abbreviated with the **addition assignment operator** `+=` as `c += 3;`
 
@@ -351,6 +353,19 @@ where **operator** is one of the binary operators +, -, *, / or % can be written
  |`*=`| `e *= 5`| `e = e * 5`| 20 to e| 
  |`/=`| `f /= 3`| `f = f / 3`| 2 to f| 
  |`%=`| `g %= 9`| `g = g % 9`| 3 to g| 
+
+-- Trivia Quiz
+
+#define CONST_TEMP = 100
+
+temp = readCurrentTemp(); /* read current temperature form the sensor */
+
+1. if (temp == CONST_TEMP)
+      /* do some stuff */
+2. if (CONST_TEMP == temp)
+     /* do some stuff */
+     
+Between 1 and 2, which is better code statement and why? 
 
 *Arithmetic assignment operators*
 
@@ -380,7 +395,7 @@ where **operator** is one of the binary operators +, -, *, / or % can be written
 |`=`	`+=`	`-=`	`*=`	`/=`	`%=`|right to left|assignment|
 
 
-*Precedence and associativity of the operators encountered so far in the text*
+*Precedence and associativity of the operators encountered so far in the text
 
 
 ### C Program Control
@@ -473,6 +488,13 @@ do{
 
 [*do..while* example](c/do_while.c)
 
+--- Trivia Quiz
+
+How can do/while be used to write compact code? 
+
+Hint: think of gotos which are generally not used as bad practice in high level languages
+
+
 #### *break* and *continue* Statements
 The **break** and **continue** statements are used to alter the flow control. The break statement when executed in a while, for, do...while or switch statement, cause an immediate exit from the statement. Program execution continues with the next statement.Common uses of the break statement ate to escape early from a loop or to skip the remainder of switch statement.
 
@@ -482,6 +504,9 @@ The continue statement, when executed in a while , for or do...while statement, 
 ![bf](c/images/break_for.png  "bf")
 [Continue statement example with for](c/continue_for.c)
 ![cf](c/images/continue_for.png  "cf")
+
+--- Danger: keep close eye on swtich(case) statements without break. This leads to fallthrough bugs. Explain how. 
+
 #### Logical Operators 
 C provides **logical operators** that may be used to form more complex conditions by combining simple conditions. The logical operators are **&&(logical AND)**, **||(logical OR)** and **! (logical NOT)** also called **logical negation**. 
 Suppose we wish to ensure that two conditions are *both* true before we choose a certain path of execution. In this case, we can use the logical operator **&&** as follows:
@@ -702,6 +727,10 @@ A character array can be initialized using a string literal. For example, `char 
 ~~~
 char string1[] = { 'f', 'i', 'r', 's', 't', '\0' };
 ~~~
+ 
+ -- you could initialize string as 
+ 
+char string1[] = "first"; /* note compiler inserts \0 */
  
 Because a string is really an array of characters, we can access individual characters in a string directly using array subscription notation. Fro example, string1[0] is the character 'f' and string1[3] is the character 's'.
 
