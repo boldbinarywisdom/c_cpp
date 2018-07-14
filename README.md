@@ -776,6 +776,7 @@ In C, you use pointers and the indirection operator to simulate call-by-referenc
 ![c2](c/images/Cube2.png  "c2")
 
 ####Using *const* Qualifier with Pointers
+The **const qualifier** enables you to inform the compiler that the value of a particular variable should not be modified. Six possibilities exist for using (or not using ) const with function parameters, two with call-by-value parameter passing and four with call-by-reference parameter passing. There are four ways to pass apointer to a function: a **non-constant pointer to non-constant data**, a **constant pointer to nonconstant data**, a **non-constant pointer to constant data**, and a **constant pointer to constant data**. Each of the four combinations provides different access privileges.
 
 ####sizeof Operator
 
